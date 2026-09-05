@@ -57,7 +57,7 @@ FRONTEND_ORIGINS=https://mcpoloo-frontend.onrender.com,http://localhost:3000
 
 Docker deployments also accept provider-style URLs such as `postgres://user:password@host:port/database`; the entrypoint converts them before Spring Boot starts.
 
-The first admin user is created from `ADMIN_USERNAME` and `ADMIN_PASSWORD` when the database is empty.
+The first admin user is created from `ADMIN_USERNAME` and `ADMIN_PASSWORD` when the database is empty. If `ADMIN_PASSWORD` is not set, the current deployment fallback is `admin12345`; change it in Render for a real public deployment.
 
 After deployment, the frontend must point to the backend:
 
